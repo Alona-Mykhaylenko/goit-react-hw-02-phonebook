@@ -30,15 +30,13 @@ class App extends Component {
 
     const newContact = {
       id: uuidv4(),
-      name: name,
-      number: number,
+      name,
+      number,
       filter: this.state.filter,
     };
 
     this.setState((prevState) => ({
       contacts: [newContact, ...prevState.contacts],
-      name: "",
-      number: "",
       filter: "",
     }));
   };
